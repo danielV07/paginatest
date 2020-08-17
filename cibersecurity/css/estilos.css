@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+* { 
+    box-sizing: border-box;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+body {
+    font-family: 'Open Sans' , sans-serif;
+    margin: 0;
+    background: #E0E0E0;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 2px ; 
+}
+
+.section__titulo{
+    text-align: center;
+    font-size: 40px;
+    color: blue;
+}
+.contenedor{
+    margin: auto;
+    width: 99%;
+}
+
+/*------------------------------Estilos del header---------------------*/
+
+.header{
+    height: 55px;
+}
+.header .contenedor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    font-size: 25px;
+}
+
+.logo, .icon-menu {
+    margin: 8px;
+    color: white;
+}
+
+.form__link{
+    margin: 8px;
+    font-size: 12px;
+    color: white;
+}
+
+.linkfinal{
+    font-size: 13px;
+    color: white;
+}
+
+.form__link2{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: white;
+}
+
+.linkfinal2{
+    font-size: 12px;
+    color: white;
+}
+
+
+.icon-menu {
+    display: block;
+    width: 55px;
+    height: 40px;
+    font-size: 30px;
+    background: #4A74A4;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+}
+/*-----------------------ESTILOS MENU----------------*/
+.nav {
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    left: -100%;
+}
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    right: 0;
+}
+.menu__link{
+    display: block;
+    padding: 20px;
+    background: rgba(74,116,164,0.8);
+    text-decoration: none;
+    color: #fff;
+}
+.menu__link:hover ,.select{     /*ES PARA CUANDO DESLISAMOS EL PUNTERO POR EL MENU SE CAMBIE BLANCO*/
+    background: white;
+    color: #4A74A4;
+}
+.mostrar{
+    left: 0;
+    transition: all 0.4s;
+}
+
+/*-----------------------------EStilos del banner-----------------------------*/
+.banner{
+    opacity: 0.8;
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+}
+
+.banner .contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color:#fff;
+    text-align: center;
+}
+
+.banner__titulo{
+    padding: 15px;
+}
+
+.banner__txt{
+    display: none;
+}
+
+/*----------------Estilos de info--------*/
+.info__columna {
+    background: #4A74A4;
+    color: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+/*------------------Estilos Curso-------------*/
+
+.cursos__columnas{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.cursos__descripcion{
+    position:absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0,0,0,0.5); 
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    padding: 5px;
+}
+
+.cursos__titulo{
+    font-size: 25px;
+    margin:5px 0;
+    
+}
+/*----------EStilos del footer----*/
+
+.footer{
+    background: #4A74A4;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer .social [class^="icon-"] {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+}
+
+/*----------Estilos responsive--------*/
+
+@media(min-width:480px){
+    .logo{
+       font-size: 40px;
+    }
+    .banner__titulo {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .banner__txt {
+        display: block;
+        font-size: 18px;
+        margin: 7px 0;
+    }
+    .form__link{
+        font-size: 13px;
+        color: white;
+    }    
+
+    .linkfinal{
+        font-size: 14px;
+        color: white;
+    }
+    
+    .info, .cursos{
+        display: flex;
+        justify-content: space-between;
+        margin-top: -90px;
+    }
+    .info__columna {
+        width: 30%;
+    }
+    .info__titulo {
+        font-size: 30px;
+        margin: 5px 0;
+    }
+    .section__titulo {
+        width: 100%;
+    }
+    .cursos{
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+    .cursos__columnas{
+        width: 49%;
+    }
+    .cursos__descripcion{
+        font-size: 14px
+    }
+    .footer .social [class^="icon-"] {
+        margin: 0 10px
+    }
+}
+
+@media(min-width:768px){
+    .banner__titulo{
+        font-size: 50px;
+    }
+    .cursos__titulos{
+        font-size: 40px;
+    }
+}
+
+@media(min-width:1024px){
+    .contenedor{
+        width: 1000px;
+    }
+    .section__titulo{
+        font-size: 60px;
+        margin: 30px 0;
+    }
+    .nav{
+        position: static;
+        width: auto;
+    }
+    .menu{
+      display: flex;      
+    }
+    .icon-menu{
+        display: none;
+    }
+    .menu__link{
+        background: none;
+        font-size: 20px;
+    }
+    .select {
+        background: #4A74A4;
+        color: #fff;
+    }
+    .banner__titulo{
+        font-size: 60px;
+    }
+    .banner__txt{
+        font-size: 25px;
+    }
+    .info{
+        margin-top: -120px;
+    }
+    .info__titulo{
+        font-size: 40px;
+        text-align: center;
+    }
+    .cursos__descripcion{
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .cursos__titulos{
+        font-size: 45px;
+    }
+    .cursos__txt{
+        font-size: 18px;
+    }
+}
+
+@media(min-width:1280px){
+    .contenedor{
+        width: 1200px;
+    }
+    .logo{
+        font-size: 70px;
+    }
+    
+    .banner, .contenedor{
+        top: 40%;
+    }
+    
+}
+
+
+
+
+
